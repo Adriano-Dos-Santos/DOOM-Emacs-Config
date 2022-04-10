@@ -50,4 +50,5 @@
 ;(unpin! t)
 
 (package! emmet-mode)
-(package! spaceline)
+(package! blamer)
+(package! crux)

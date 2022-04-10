@@ -29,13 +29,45 @@
 ;;Emmet
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto start on any markup modes
 (add-hook 'css-mode-hook 'emmet-mode) ;; Enable Emet's css abbreviation
-(defalias 'M+q 'emmet-expand-line)
 
-;;spaceline
-(require 'spaceline)
-(require 'spaceline-segments)
-(require 'spaceline-config)
-(spaceline-spacemacs-theme)
+
+(setq doom-themes-treemacs-theme "doom-colors")
+(setq rainbow-delimiters-mode t)
+
+;;Projects
+(setq projectile-project-search-path '("~/Documentos/projetos/projetos++"))
+
+;;blamer
+(use-package blamer
+  :bind (("s-i" . blamer-show-commit-info))
+  :defer 20
+  :custom
+  (blamer-idle-time 0.3)
+  (blamer-min-offset 70)
+  :custom-face
+  (blamer-face ((t :foreground "#7a88cf"
+                    :background nil
+                    :height 140
+                    :italic t)))
+  :config
+  (global-blamer-mode 1))
+
+;;Keybindings
+(map! :leader
+        :desc "evil-window-right"
+         "l" #'evil-window-right)
+
+(map! :leader
+      :desc "evil-window-left"
+      "k" #'evil-window-left)
+
+(map! :leader
+      :desc "copy-line"
+      "!" #'crux-duplicate-current-line-or-region)
+
+
+;;treemacs
+(setq treemacs-width 20)
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
