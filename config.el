@@ -29,7 +29,9 @@
 ;;Emmet
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto start on any markup modes
 (add-hook 'css-mode-hook 'emmet-mode) ;; Enable Emet's css abbreviation
-
+(map! :leader
+      :desc "emmet-expand-line"
+      "e" #'emmet-expand-line)
 
 (setq doom-themes-treemacs-theme "doom-colors")
 (setq rainbow-delimiters-mode t)
@@ -64,10 +66,30 @@
 (map! :leader
       :desc "copy-line"
       "!" #'crux-duplicate-current-line-or-region)
-
+(map! :leader
+      :desc "save-buffer"
+      "s" #'save-buffer)
+(map! :leader
+      :desc "prodigy"
+      "o o" #'prodigy)
 
 ;;treemacs
 (setq treemacs-width 20)
+
+;;nyan mode
+(setq nyan-mode t)
+(setq nyan-animate-nyancat t)
+(setq nyan-wavy-trail t)
+
+
+;;prodigy-mode
+(prodigy-define-service
+  :name "Live-server"
+  :command "live-server"
+  :arg "8080"
+  :cwd  "/home/adrianodossantos/Documentos/projetos/Github/CSS/Test"
+  :tags '(server)
+  )
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to

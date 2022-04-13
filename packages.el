@@ -52,3 +52,5 @@
 (package! emmet-mode)
 (package! blamer)
 (package! crux)
+(package! nyan-mode)
+(package! prodigy)
