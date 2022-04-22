@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 16 :weight 'semi-light)
+(setq doom-font (font-spec :family "CaskaydiaCove NF" :size 16 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 
 (setq doom-emoji-fallback-font-families nil)
@@ -87,7 +87,7 @@
   :name "Live-server"
   :command "live-server"
   :arg "8080"
-  :cwd  "/home/adrianodossantos/Documentos/projetos/Github/CSS/Test"
+  :cwd ;;~/Documentos/projetos
   :tags '(server)
   )
 
@@ -99,8 +99,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
-
+(setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.

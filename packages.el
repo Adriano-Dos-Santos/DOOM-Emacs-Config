@@ -54,3 +54,4 @@
 (package! crux)
 (package! nyan-mode)
 (package! prodigy)
+(package! catppuccin-theme)
