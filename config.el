@@ -10,7 +10,7 @@
       user-mail-address "adsc999@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
-;;
+;; test
 ;; - `doom-font' -- the primary font to use
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
