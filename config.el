@@ -57,21 +57,49 @@
 ;;Keybindings
 (map! :leader
         :desc "evil-window-right"
-         "l" #'evil-window-right)
+         "4" #'evil-window-right)
 
 (map! :leader
       :desc "evil-window-left"
-      "k" #'evil-window-left)
+      "1" #'evil-window-left)
+
+(map! :leader
+      :desc "evil-windows-up"
+      "3" #'evil-window-up)
+
+(map! :leader
+      :desc "evil-windows-down"
+      "2" #'evil-window-down)
 
 (map! :leader
       :desc "copy-line"
       "!" #'crux-duplicate-current-line-or-region)
 (map! :leader
       :desc "save-buffer"
-      "s" #'save-buffer)
+      "d" #'save-buffer)
 (map! :leader
       :desc "prodigy"
       "o o" #'prodigy)
+
+;; BOOKmark in project
+
+(map! :leader
+      :desc "bookmark-in-project-toggle"
+      "b 4" #'bookmark-in-project-toggle)
+
+(map! :leader
+      :desc "bookmark-in-project-jump-next"
+      "b 2" #'bookmark-in-project-jump-next)
+
+(map! :leader
+      :desc "bookmark-in-project-jump-previous"
+      "b 1" #'bookmark-in-project-jump-previous)
+
+(map! :leader
+      :desc "bookmark-in-project-jump"
+      "b 3" #'bookmark-in-project-jump)
+
+
 
 ;;treemacs
 (setq treemacs-width 20)
@@ -80,16 +108,13 @@
 (setq nyan-mode t)
 (setq nyan-animate-nyancat t)
 (setq nyan-wavy-trail t)
+(setq beacon-mode t)
+
+
 
 
 ;;prodigy-mode
-(prodigy-define-service
-  :name "Live-server"
-  :command "live-server"
-  :arg "8080"
-  :cwd ;;~/Documentos/projetos
-  :tags '(server)
-  )
+
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to

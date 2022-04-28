@@ -1,4 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
+;;
+;;
 ;;; $DOOMDIR/packages.el
 
 ;; To install a package with Doom you must declare them here and run 'doom sync'
@@ -53,5 +55,6 @@
 (package! blamer)
 (package! crux)
 (package! nyan-mode)
-(package! prodigy)
 (package! catppuccin-theme)
+(package! beacon)
+(package! bookmark-in-project)
