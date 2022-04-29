@@ -102,18 +102,16 @@
 
 
 ;;treemacs
-(setq treemacs-width 20)
+(setq treemacs-width 25)
 
 ;;nyan mode
 (setq nyan-mode t)
 (setq nyan-animate-nyancat t)
 (setq nyan-wavy-trail t)
+;;beacon
 (setq beacon-mode t)
-
-
-
-
 ;;prodigy-mode
+
 
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -125,6 +123,36 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-tokyo-night)
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+;;MODELINE
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+
+
+(setq doom-modeline-buffer-modification-icon t)
+(setq doom-modeline-buffer-name t)
+(setq doom-modeline-minor-modes nil)
+(setq doom-modeline-enable-word-count nil)
+(setq doom-modeline-continuous-word-count-modes '(markdown-mode gfm-mode org-mode))
+(setq doom-modeline-buffer-encoding t)
+(setq doom-modeline-indent-info nil)
+(setq doom-modeline-checker-simple-format t)
+(setq doom-modeline-number-limit 99)
+(setq doom-modeline-workspace-name t)
+(setq doom-modeline-persp-name t)
+(setq doom-modeline-lsp t)
+(setq doom-modeline-modal-icon t)
+(setq doom-modeline-env-version t)
+
+
+(setq all-the-icons-)
+
+
+
+
+(setq visual-line-mode t)
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
