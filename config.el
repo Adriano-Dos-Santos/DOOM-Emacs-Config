@@ -104,15 +104,13 @@
 ;;treemacs
 (setq treemacs-width 25)
 
-;;nyan mode
-(setq nyan-mode t)
-(setq nyan-animate-nyancat t)
-(setq nyan-wavy-trail t)
 ;;beacon
 (setq beacon-mode t)
 ;;prodigy-mode
 
 
+(setq global-tree-sitter-mode t)
+(add-hook 'css-mode 'tree-sitter-hl-mode)
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -122,7 +120,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'doom-dracula)
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;;MODELINE
@@ -146,7 +144,6 @@
 (setq doom-modeline-env-version t)
 
 
-(setq all-the-icons-)
 
 
 
@@ -154,9 +151,15 @@
 (setq visual-line-mode t)
 
 
+
+
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+
+(add-hook 'css-mode-hook #'global-tree-sitter-mode)
+(add-hook 'css-mode-hook #'tree-sitter-hl-mode)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
