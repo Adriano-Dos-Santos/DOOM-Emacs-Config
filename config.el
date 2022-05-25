@@ -26,12 +26,57 @@
 
 (setq doom-emoji-fallback-font-families nil)
 
+;;; :editor evil
+;; Focus new window after splitting
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
+
+(setq auto-save-default t
+      scroll-margin 4
+      ) ;;auto save and margin
+;;
+(display-time-mode 1) ;;display time on modeline
+;;
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+(defadvice! prompt-for-buffer (&rest _)
+  :after '(evil-window-split evil-window-vsplit)
+  (consult-buffer)) ;;when split window ask what file to open
+
+
+(setq display-line-numbers-type 'relative)
+
+
+;;Splashscreen
+(add-hook! '+doom-dashboard-functions :append
+           (insert "\n" (+doom-dashboard--center +doom-dashboard--width "When nothing can hold back the tide, WE RISE")))
+ (setq doom-fallback-buffer-name "► Doom"
+       +doom-dashboard-name "► Doom")
+
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
+(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil));;clean splashscreen
+
+
 ;;Emmet
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto start on any markup modes
 (add-hook 'css-mode-hook 'emmet-mode) ;; Enable Emet's css abbreviation
 (map! :leader
       :desc "emmet-expand-line"
       "e" #'emmet-expand-line)
+
+
+;;company-mode-tabnine
+(after! company
+  (setq +lsp-company-backends '(company-tabnine :separate company-capf company-yasnippet))
+  (setq company-show-quick-access t)
+  (setq company-idle-delay 0)
+)
+(map! :leader
+      :desc "tabnine"
+      "´" #'company-tabnine)
+
+
 
 (setq doom-themes-treemacs-theme "doom-colors")
 (setq rainbow-delimiters-mode t)

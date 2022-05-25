@@ -59,3 +59,5 @@
 (package! bookmark-in-project)
 (package! tree-sitter)
 (package! tree-sitter-langs)
+(package! company-tabnine :recipe (:host github :repo "TommyX12/company-tabnine"))
+(package! modus-themes)
