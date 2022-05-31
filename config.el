@@ -36,15 +36,9 @@
       ) ;;auto save and margin
 ;;
 (display-time-mode 1) ;;display time on modeline
-;;
-(setq evil-vsplit-window-right t
-      evil-split-window-below t)
-(defadvice! prompt-for-buffer (&rest _)
-  :after '(evil-window-split evil-window-vsplit)
-  (consult-buffer)) ;;when split window ask what file to open
 
 
-(setq display-line-numbers-type 'relative)
+;;zen
 
 
 ;;Splashscreen
@@ -53,9 +47,9 @@
  (setq doom-fallback-buffer-name "► Doom"
        +doom-dashboard-name "► Doom")
 
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
-(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil));;clean splashscreen
+;;(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+;(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
+;(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil));;clean splashscreen
 
 
 ;;Emmet
@@ -64,7 +58,6 @@
 (map! :leader
       :desc "emmet-expand-line"
       "e" #'emmet-expand-line)
-
 
 ;;company-mode-tabnine
 (after! company

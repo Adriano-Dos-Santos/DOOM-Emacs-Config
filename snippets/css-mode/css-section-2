@@ -1,0 +1,49 @@
+# -*- mode: snippet -*-
+# name: css-section-2
+# key:
+# --
+
+/* Main_Section-2 */
+
+.section-2 {
+display: flex;
+gap: 2%;
+margin: 3% 5.5%;
+height: 100%;
+}
+.section-2_article {
+display: flex;
+flex-direction: column;
+flex: 1 1 33.3%;
+height: 52vh;
+}
+.article-1 img,
+.article-2 img {
+max-width: 100%;
+border-radius: 2.5px;
+}
+
+.article-1 h2,
+.article-2 h2{
+font-size: 2.2rem;
+}
+.article-1 p,
+.article-2 p {
+line-height: 1.6;
+font-size: 1.72rem;
+}
+
+.article-2 a {
+color: rgb(200, 160, 100);
+font-size: 1.7rem;
+}
+.article-2 a::after {
+content: "--->";
+padding-left: 14px;
+
+}
+
+.article-3 {
+border: 0.1px solid rgb(41,41,41);
+
+}
