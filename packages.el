@@ -60,4 +60,6 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (package! company-tabnine :recipe (:host github :repo "TommyX12/company-tabnine"))
-(package! modus-themes)
+(package! night-owl-theme)
+(package! color-theme-sanityinc-tomorrow)
+(package! spacemacs-theme)

@@ -38,14 +38,16 @@
 (display-time-mode 1) ;;display time on modeline
 
 
-;;zen
-
 
 ;;Splashscreen
 (add-hook! '+doom-dashboard-functions :append
            (insert "\n" (+doom-dashboard--center +doom-dashboard--width "When nothing can hold back the tide, WE RISE")))
  (setq doom-fallback-buffer-name "► Doom"
        +doom-dashboard-name "► Doom")
+
+(add-hook! '+doom-dashboard-mode
+  (setq hide-mode-line-mode t)
+  )
 
 ;;(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 ;(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
@@ -68,7 +70,6 @@
 (map! :leader
       :desc "tabnine"
       "´" #'company-tabnine)
-
 
 
 (setq doom-themes-treemacs-theme "doom-colors")
@@ -119,6 +120,17 @@
       :desc "prodigy"
       "o o" #'prodigy)
 
+
+;;Cleaanmode
+(map! :leader
+      :desc "display-line-numbers-mode"
+      "z c" #'display-line-numbers-mode)
+(map! :leader
+      :desc "hide-modeline"
+      "z d" #'hide-mode-line-mode)
+
+(setq set-window-margins nil left-margin-width 3)
+
 ;; BOOKmark in project
 
 (map! :leader
@@ -140,7 +152,7 @@
 
 
 ;;treemacs
-(setq treemacs-width 25)
+(setq treemacs-width 20)
 
 ;;beacon
 (setq beacon-mode t)
@@ -158,7 +170,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-palenight)
+(setq doom-theme 'doom-dracula)
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;;MODELINE
