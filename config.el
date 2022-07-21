@@ -135,21 +135,22 @@
 
 (map! :leader
       :desc "bookmark-in-project-toggle"
-      "b 4" #'bookmark-in-project-toggle)
+      "9" #'bookmark-in-project-toggle)
 
 (map! :leader
       :desc "bookmark-in-project-jump-next"
-      "b 2" #'bookmark-in-project-jump-next)
+      "=" #'bookmark-in-project-jump-next)
 
 (map! :leader
       :desc "bookmark-in-project-jump-previous"
-      "b 1" #'bookmark-in-project-jump-previous)
+      "-" #'bookmark-in-project-jump-previous)
 
 (map! :leader
       :desc "bookmark-in-project-jump"
-      "b 3" #'bookmark-in-project-jump)
+      "0" #'bookmark-in-project-jump)
 
-
+;;Cua mode
+(setq cua-mode t)
 
 ;;treemacs
 (setq treemacs-width 20)
